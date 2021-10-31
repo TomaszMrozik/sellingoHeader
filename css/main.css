@@ -365,6 +365,7 @@ header {
   width: 100%;
   height: 100%;
   border-top: 7px solid #00B289;
+  font-family: "Ubuntu", sans-serif;
 }
 header .container {
   margin: 0 auto;
@@ -402,15 +403,89 @@ header .container .icons img {
   height: 30px;
   margin: 0 20px;
 }
+header .container .icons img:last-of-type {
+  margin-right: 0;
+}
 header .decoration {
   width: 100%;
   height: 1px;
   background: #F5F5F5;
-  margin: 25px 0;
+  margin: 27px 0;
 }
 header .upperNav {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
+}
+header .lowerNav {
+  height: 2.6rem;
+}
+header .lowerNav ul {
+  display: flex;
+}
+header .lowerNav ul li {
+  margin: 0 2.2rem;
+}
+header .lowerNav ul li:first-of-type {
+  margin-left: 0;
+}
+header .lowerNav ul li:hover {
+  cursor: pointer;
+}
+header .input {
+  width: 80%;
+  border: 5px solid #00B289;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+header .input input {
+  height: 80%;
+  width: 90%;
+  margin-left: 0.5rem;
+}
+header .input input ::-moz-placeholder {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+}
+header .input input :-ms-input-placeholder {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+}
+header .input input ::placeholder {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+}
+header .input input :hover {
+  border: none;
+}
+header .input button {
+  border: none;
+  background: #00B289;
+  height: 80%;
+  width: 7.3rem;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: center;
+  margin-right: 0.3rem;
 }
 /*# sourceMappingURL=main.css.map */
