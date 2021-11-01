@@ -396,8 +396,13 @@ header .container div nav ul li {
 header .container div nav ul li:hover {
   cursor: pointer;
 }
-header .container .icons {
-  margin-top: 30px;
+@media (max-width: 934px) {
+  header .container div nav {
+    display: none;
+  }
+}
+header .container .icons:hover {
+  cursor: pointer;
 }
 header .container .icons img {
   height: 30px;
@@ -405,6 +410,11 @@ header .container .icons img {
 }
 header .container .icons img:last-of-type {
   margin-right: 0;
+}
+@media (max-width: 934px) {
+  header .container .icons {
+    display: none;
+  }
 }
 header .decoration {
   width: 100%;
@@ -416,6 +426,7 @@ header .upperNav {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
+  align-items: center;
 }
 header .lowerNav {
   height: 2.6rem;
@@ -432,10 +443,15 @@ header .lowerNav ul li:first-of-type {
 header .lowerNav ul li:hover {
   cursor: pointer;
 }
+@media (max-width: 934px) {
+  header .lowerNav {
+    display: none;
+  }
+}
 header .input {
   width: 80%;
   border: 5px solid #00B289;
-  height: 2.5rem;
+  height: 2.8rem;
   display: flex;
   align-items: center;
   border-radius: 5px;
@@ -445,6 +461,7 @@ header .input input {
   height: 80%;
   width: 90%;
   margin-left: 0.5rem;
+  border: none;
 }
 header .input input ::-moz-placeholder {
   font-size: 14px;
@@ -470,7 +487,7 @@ header .input input ::placeholder {
   letter-spacing: 0;
   text-align: center;
 }
-header .input input :hover {
+header .input input:focus {
   border: none;
 }
 header .input button {
@@ -487,5 +504,43 @@ header .input button {
   letter-spacing: 0;
   text-align: center;
   margin-right: 0.3rem;
+}
+
+.menu__btn {
+  display: none;
+  position: absolute;
+  margin-top: 50px;
+  opacity: 0;
+}
+@media (max-width: 934px) {
+  .menu__btn:checked ~ .menu__toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 12px);
+  }
+  .menu__btn:checked ~ .menu__toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu__btn:checked ~ .menu__toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(3px, -7px);
+  }
+}
+.menu__toggle {
+  display: none;
+}
+.menu__toggle span {
+  width: 35px;
+  height: 7px;
+  display: block;
+  border-radius: 3px;
+  margin-bottom: 4px;
+  background: #00B289;
+  transition: 0.3s all ease-in-out;
+}
+.menu__toggle span:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 934px) {
+  .menu__toggle {
+    display: block;
+  }
 }
 /*# sourceMappingURL=main.css.map */

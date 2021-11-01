@@ -38,17 +38,25 @@ header {
 
           }
         }
+        @include mobile {
+          display: none;
+        }
       }
     }
 
     .icons {
-      margin-top: 30px;
+      &:hover {
+        cursor: pointer;
+      }
       img {
         height: 30px;
         margin: 0 20px;
         &:last-of-type {
           margin-right: 0;
         }
+      }
+      @include mobile {
+        display: none;
       }
     }
   }
@@ -62,10 +70,12 @@ header {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    align-items: center;
   }
 
   .lowerNav {
     height: 2.6rem;
+
     ul {
       display: flex;
       li {
@@ -81,12 +91,15 @@ header {
         }
       }
     }
+    @include mobile {
+      display: none;
+    }
   }
 
   .input {
     width: 80%;
     border: 5px solid $primary-color;
-    height: 2.5rem;
+    height: 2.8rem;
     display: flex;
     align-items: center;
     border-radius: 5px;
@@ -96,6 +109,7 @@ header {
       height: 80%;
       width: 90%;
       margin-left: 0.5rem;
+      border: none;
 
       ::placeholder {
         font-size: 14px;
@@ -108,7 +122,7 @@ header {
 
       }
 
-      :hover {
+      &:focus {
         border: none;
       }
     }
@@ -130,3 +144,58 @@ header {
   }
 
 }
+
+.menu {
+  &__btn {
+    display: none;
+    position: absolute;
+    margin-top: 50px;
+    opacity: 0;
+
+
+    @include mobile {
+      &:checked {
+
+        ~ .menu__toggle {
+          span {
+            &:nth-child(1) {
+              transform: rotate(45deg) translate(9px, 12px);
+            }
+
+            &:nth-child(2) {
+              opacity: 0;
+            }
+
+            &:nth-child(3) {
+              transform: rotate(-45deg) translate(3px, -7px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    span {
+      width: 35px;
+      height: 7px;
+      display: block;
+      border-radius: 3px;
+      margin-bottom: 4px;
+      background: $primary-color;
+      transition: .3s all ease-in-out;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
+
