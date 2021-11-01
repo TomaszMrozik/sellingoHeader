@@ -38,7 +38,7 @@ header {
 
           }
         }
-        @include mobile {
+        @include tablet {
           display: none;
         }
       }
@@ -55,7 +55,7 @@ header {
           margin-right: 0;
         }
       }
-      @include mobile {
+      @include tablet {
         display: none;
       }
     }
@@ -91,7 +91,7 @@ header {
         }
       }
     }
-    @include mobile {
+    @include tablet {
       display: none;
     }
   }
@@ -153,7 +153,7 @@ header {
     opacity: 0;
 
 
-    @include mobile {
+    @include tablet {
       &:checked {
 
         ~ .menu__toggle {
@@ -192,7 +192,7 @@ header {
       }
     }
 
-    @include mobile {
+    @include tablet {
       display: block;
     }
   }

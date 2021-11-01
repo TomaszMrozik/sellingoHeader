@@ -543,4 +543,36 @@ header .input button {
     display: block;
   }
 }
+
+.swiper {
+  height: 30rem;
+  margin-top: 3rem;
+}
+.swiper .swiper-slide {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+.swiper .swiper-slide img {
+  width: 100vw;
+  min-width: 430px;
+}
+.swiper .green {
+  background: #00B289;
+}
+.swiper .red {
+  background: darkred;
+}
+@media (max-width: 934px) {
+  .swiper {
+    height: 20rem;
+  }
+}
+@media (max-width: 575px) {
+  .swiper {
+    height: 10rem;
+  }
+}
 /*# sourceMappingURL=main.css.map */
